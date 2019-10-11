@@ -1,0 +1,2 @@
+# P1.10
+People now have access to a rapidly growing number of public data sources from the web/cloud which are getting augmented with personal sensors which now commonly talk to mobile phones or web pages. We are going to look at designing an interface to make this kind of data and more available on your personal bathroom mirror (single person use), which could act as a large display touch display.
