@@ -1,2 +1,24 @@
-# P1.10
-People now have access to a rapidly growing number of public data sources from the web/cloud which are getting augmented with personal sensors which now commonly talk to mobile phones or web pages. We are going to look at designing an interface to make this kind of data and more available on your personal bathroom mirror (single person use), which could act as a large display touch display.
+P1.10
+# Project 1: Personal Mirror
+
+### Sketches:
+
+### Team members and our roles
+   Abraham Esparza - UI/UX Designer
+                       Sketch the ideas that we all come up with. Make sure the UI/UX is where we want it to be. 
+   Jack Chen -       Front-End Developer
+                       Research and use p5.js. Implement the widgets and the functionality of our project.
+   Timothy Bell -    Front-End Developer
+                       Research and use p5.js. Implement the widgets and the functionality of our project.
+   Angela Green -    Team Leader 
+                       Update the README file. Keep everyone on task, make sure we're hitting benchmarks. Help where needed. 
+   Stanley Yoang -   UI/UX Designer
+                       Sketch the ideas that we all come up with.  Make sure the UI/UX is where we want it to be. 
+   
+   Everyone will be contributing ideas for the UI and helping to implement them. 
+   
+### UI Sketch, main functions to be supported:
+
+### How far did we go with the implementation
+
+### The plan moving forward:
