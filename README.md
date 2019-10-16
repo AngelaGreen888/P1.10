@@ -4,7 +4,8 @@ P1.10
 ### Sketches:
 
 ### Team members and our roles
-   Abraham Esparza - UI/UX Designer.
+
+Abraham Esparza - UI/UX Designer.
    Sketch the ideas that we all come up with. Make sure the UI/UX is where we want it to be. 
                        
    Jack Chen -       Front-End Developer.
@@ -26,4 +27,5 @@ P1.10
 ### How far did we go with the implementation
 
 ### The plan moving forward:
-    Now that sketches are done and we know what features we want to include in our project, now we will be creating a p5.js file within this GitHub project. This will allow for collaboration among the group as we will make a separate branch for testing. By using pull requests we will be able to check each other's work and merge when we feel that the improvements are of good quality. 
+
+Now that sketches are done and we know what features we want to include in our project, now we will be creating a p5.js file within this GitHub project. This will allow for collaboration among the group as we will make a separate branch for testing. By using pull requests we will be able to check each other's work and merge when we feel that the improvements are of good quality. 
