@@ -25,7 +25,7 @@ Everyone will be contributing ideas for the UI and helping to implement them.
 
 ### UI Sketch, main functions to be supported:
 
-![default](sketch/default.PNG)
+<img src="/sketch/default.PNG" width="500" height="500">
 
 ### How far did we go with the implementation
 
