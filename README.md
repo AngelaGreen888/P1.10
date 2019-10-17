@@ -80,4 +80,6 @@ New Conditions: <br/>
 
 ### How far did we go with the implementation?
 
+As of right now, we have played around with the sizing and video capture in p5.js. We have not started implementing the features discussed above at this current time. However, our group has a strong idea of how we want out mirror to look including more states that have not been depicted in the sketches above.
+
 ### The plan moving forward:
