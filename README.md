@@ -83,3 +83,5 @@ New Conditions: <br/>
 As of right now, we have played around with the sizing and video capture in p5.js. We have not started implementing the features discussed above at this current time. However, our group has a strong idea of how we want out mirror to look including more states that have not been depicted in the sketches above.
 
 ### The plan moving forward:
+
+Now that sketches are done and we know what features we want to include in our project, now we will be creating a p5.js file within this GitHub project. This will allow for collaboration among the group as we will make a separate branch for testing. By using pull requests we will be able to check each other's work and merge when we feel that the improvements are of good quality. 
