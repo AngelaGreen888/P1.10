@@ -1,0 +1,22 @@
+let capture;
+let pg;
+let img;
+
+function setup() {
+  createCanvas(1280, 720);
+  capture = createCapture(VIDEO);
+  pg = createGraphics(1280, 720);
+  img = loadImage('/trash.png');
+  capture.size(1280, 720);
+  capture.hide();
+}
+
+function draw() {
+  background(0,100,120);
+  pg.background(0, 0, 0, 0);
+  pg.noStroke();
+  pg.image(img, 0, 0);
+  image(capture, 20, 20, 1240, 680);
+  image(pg, 0, 0, 1280, 710);
+  
+}
