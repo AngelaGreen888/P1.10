@@ -6,11 +6,8 @@ P1.10
 
 ### Team members and our roles
 
-Abraham Esparza - UI/UX Designer.
-Sketch the ideas that we all come up with. Make sure the UI/UX is where we want it to be.
-
-Jack Chen - Front-End Developer.
-Research and use p5.js. Implement the widgets and the functionality of our project.
+![](P1.10.GroupPicture.jpg)
+From right to left: Timothy Bell, Angela Green, Stanley Yoang, Abraham Esparza, and Jack Chen
 
 Timothy Bell - Front-End Developer.
 Research and use p5.js. Implement the widgets and the functionality of our project.
@@ -21,61 +18,67 @@ Update the README file. Keep everyone on task, make sure we're hitting benchmark
 Stanley Yoang - UI/UX Designer.
 Sketch the ideas that we all come up with. Make sure the UI/UX is where we want it to be.
 
+Abraham Esparza - UI/UX Designer.
+Sketch the ideas that we all come up with. Make sure the UI/UX is where we want it to be. 
+
+Jack Chen - Front-End Developer.
+Research and use p5.js. Implement the widgets and the functionality of our project.
+
 Everyone will be contributing ideas for the UI and helping to implement them.
 
 ### UI Sketch, main functions to be supported:
 
 <img src="/sketch/default.PNG" width="350" height="350">
 
-Current Condition: <br/>
+Current Condition: 
 -User has walked in front of mirror and turned it on. The default/user-customized layout displays
 
 <img src="/sketch/pressHealthTransition.PNG" width="350" height="350">
 
-Action: <br/>
+Action: 
 -User wants to show a more detailed health description of him/herself so he/she taps the health app
 
 <img src="/sketch/expandedHealth.PNG" width="350" height="350">
 
-New Conditions: <br/>
+New Conditions: 
 -More detailed health information is displayed in the larger health widget
 
 <img src="/sketch/pressWeatherTransition.PNG" width="350" height="350">
 
-Action: <br/>
+Action: 
 -User wants to show a more detailed weather forecast so he/she taps the weather widget
 
 <img src="/sketch/expandedWeather.PNG" width="350" height="350">
 
-New Conditions: <br/>
+New Conditions: 
 -More detailed weather information is displayed in the larger weather widget
 
 <img src="/sketch/pressAndHoldTransition.PNG" width="350" height="350">
 
-Action: <br/>
+Action: 
 -User wants to show edit size and placement of selected app/widget
 
 <img src="/sketch/pressAndHoldDefault.PNG" width="350" height="350">
 
-New Conditions: <br/>
+New Conditions: 
 -Selected app/widget's corners are highlighted with blue squares
 
 <img src="/sketch/resize.PNG" width="350" height="350">
 
-Action: <br/>
--User drags bottom left corner outwards to expand the notifications widget
-New Conditions: <br/>
--Notifications widget is expanded <br/>
+Action: 
+-User drags bottom left corner outwards to expand the notifications widget <br>
+New Conditions:
+-Notifications widget is expanded 
 -Nearby apps/widgets are resized automatically accommodate the resized app/widget
 
 <img src="/sketch/dragToTrash.PNG" width="350" height="350">
 
-Action: <br/>
+Action: 
 -User drags notifications widget to trash icon to remove it from the screen
 
 <img src="/sketch/deleted.PNG" width="350" height="350">
 
-New Conditions: <br/>
+New Conditions: 
 -Notifications widget is removed from the screen
 
 ### How far did we go with the implementation?
