@@ -29,6 +29,7 @@ Everyone will be contributing ideas for the UI and helping to implement them.
 
 ### UI Sketch, main functions to be supported:
 
+![](/sketch/default.PNG)
 <img src="/sketch/default.PNG" width="350" height="350">
 
 Current Condition: <br>
