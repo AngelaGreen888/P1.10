@@ -30,41 +30,47 @@ Everyone will be contributing ideas for the UI and helping to implement them.
 ### UI Sketch, main functions to be supported:
 
 ![](/sketch/default.PNG)
-<img src="/sketch/default.PNG" width="350" height="350">
 
 Current Condition: <br>
 -User has walked in front of mirror and turned it on. The default/user-customized layout displays
 
+![](/sketch/pressHealthTransition.PNG)
 <img src="/sketch/pressHealthTransition.PNG" width="350" height="350">
 
 Action: <br>
 -User wants to show a more detailed health description of him/herself so he/she taps the health app
 
-<img src="/sketch/expandedHealth.PNG" width="350" height="350">
+![](/sketch/pressHealthTransition.PNG)
+<img src="/sketch/pressHealthTransition.PNG)" width="350" height="350">
 
 New Conditions: <br>
 -More detailed health information is displayed in the larger health widget
 
+![](/sketch/pressWeatherTransition.PNG)
 <img src="/sketch/pressWeatherTransition.PNG" width="350" height="350">
 
 Action: <br>
 -User wants to show a more detailed weather forecast so he/she taps the weather widget
 
+![](/sketch/pressWeatherTransition.PNG)
 <img src="/sketch/expandedWeather.PNG" width="350" height="350">
 
 New Conditions: <br>
 -More detailed weather information is displayed in the larger weather widget
 
+![](/sketch/pressAndHoldTransition.PNG)
 <img src="/sketch/pressAndHoldTransition.PNG" width="350" height="350">
 
 Action: <br>
 -User wants to show edit size and placement of selected app/widget
 
+![](/sketch/pressAndHoldDefault.PNG)
 <img src="/sketch/pressAndHoldDefault.PNG" width="350" height="350">
 
 New Conditions: <br>
 -Selected app/widget's corners are highlighted with blue squares
 
+![](/sketch/resize.PNG)
 <img src="/sketch/resize.PNG" width="350" height="350">
 
 Action: <br>
@@ -73,11 +79,13 @@ New Conditions:<br>
 -Notifications widget is expanded 
 -Nearby apps/widgets are resized automatically accommodate the resized app/widget
 
+![](/sketch/dragToTrash.PNG)
 <img src="/sketch/dragToTrash.PNG" width="350" height="350">
 
 Action: <br>
 -User drags notifications widget to trash icon to remove it from the screen
 
+![](/sketch/deleted.PNG)
 <img src="/sketch/deleted.PNG" width="350" height="350">
 
 New Conditions: <br>
