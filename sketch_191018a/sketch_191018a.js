@@ -20,15 +20,16 @@ function draw() {
   background(0,100,120);
   pg.background(0, 0, 0, 0);
   pg.noStroke();
+  
   let c = color(255, 204, 0);
   pg.fill(c);
-  pg.circle(40, pg.height-40, 30);
-  pg.image(plus, 15, pg.height-65, 50, 50);
+  pg.circle(30, pg.height-30, 20);
+  pg.image(plus, 15, pg.height-45, 31, 31);
   
   c = color(255, 204, 0);
   pg.fill(c);
-  pg.circle(110, pg.height-40, 30);
-  pg.image(lightbulb, 85, pg.height-65, 50, 50);
+  pg.circle(80, pg.height-30, 20);
+  pg.image(lightbulb, 65, pg.height-46, 31, 31);
   
   pg.image(healthAppLogo, 0, pg.height-550, 85, 85);
   
