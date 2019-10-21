@@ -7,6 +7,8 @@ var lightButton;
 var healthButton;
 var youtubeButton;
 
+var drawApps = false;
+
 function setup() {
   createCanvas(1280, 720);
   background(0,100,120);
@@ -62,11 +64,19 @@ function addApps() {
   healthButton.hide();
   youtubeButton.hide();
   pg.clear();
+  drawApps = true;
   
 }
 
 function draw() {
   image(capture, 20, 20, 1240, 680);
   image(pg, 20, 20, 1240, 680);
+  
+  if(drawApps == true) {
+    c = color(0,0,0,2);
+    pg.fill(c);
+    pg.rect(0, 0, pg.width, pg.height);
+  }
+  
   
 }
