@@ -1,8 +1,11 @@
 let capture;
 let pg;
+
 let plus;
 var plusButton;
 var lightButton;
+var healthButton;
+var youtubeButton;
 
 function setup() {
   createCanvas(1280, 720);
@@ -15,10 +18,7 @@ function setup() {
   pg = createGraphics(1280, 720);
   pg.background(0, 0, 0, 0);
   pg.noStroke();
-  
-  plus = loadImage('Assets/Plus.png');
-  lightbulb = loadImage('Assets/Light_Bulb.png');
-  healthAppLogo = loadImage('Assets/Apple_Health.png');
+
   youtubeAppLogo = loadImage('Assets/Youtube.png');
   
   let c = color(255, 204, 0);
@@ -37,6 +37,16 @@ function setup() {
   lightButton.size(31, 31);
   lightButton.mousePressed(changeBG);
   
+  healthButton = createImg('Assets/Apple_Health.png');
+  healthButton.position(15, pg.height-500);
+  healthButton.size(80, 80);
+  
+  c = color(255, 255, 255);
+  pg.fill(c);
+  pg.square(9, pg.height-425, 55, 0, 16);
+  youtubeButton = createImg('Assets/Youtube.png');
+  youtubeButton.position(30, pg.height-420);
+  youtubeButton.size(50, 50);
 }
 
 function changeBG() {
@@ -47,21 +57,15 @@ function changeBG() {
 }
 
 function addApps() {
+  plusButton.hide();
+  lightButton.hide();
+  healthButton.hide();
+  youtubeButton.hide();
   pg.clear();
   
-  pg.circle(80, 30, 20);
 }
 
 function draw() {
-  
-  
-  pg.image(healthAppLogo, 0, pg.height-550, 85, 85);
-  
-  c = color(255, 255, 255);
-  pg.fill(c);
-  pg.square(13, pg.height-470, 60, 0, 15);
-  pg.image(youtubeAppLogo, 13, pg.height-469, 60, 60);
-  
   image(capture, 20, 20, 1240, 680);
   image(pg, 20, 20, 1240, 680);
   
