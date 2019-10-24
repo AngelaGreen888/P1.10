@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Twitter Feed</title>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBy1u5IHTagheXGT3axvfHDKGVxf3duUv0",
+            authDomain: "uiproject-e8dd7.firebaseapp.com",
+            databaseURL: "https://uiproject-e8dd7.firebaseio.com",
+            projectId: "uiproject-e8dd7",
+            storageBucket: "uiproject-e8dd7.appspot.com",
+            messagingSenderId: "360827599869",
+            appId: "1:360827599869:web:3198544c834f2314b7b794"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+
+        let baseUrl = 'http://localhost:3000/api/';
+        let provider = new firebase.auth.TwitterAuthProvider();
+        firebase.auth().signInWithPopup(provider).then(function (result) {
+            accessToken = result.credential.accessToken;
+            secret = result.credential.secret;
+            var user = result.user;
+            alert("Authorized with Twitter " + user.displayName);
+            authenticate();
+        }).catch(function (error) {
+            console.log(error);
+        })
+        function httpGet(url) {
+            let xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", url, false);
+            xmlHttp.send(null);
+            return xmlHttp.responseText;
+        }
+        function authenticate() {
+            let url = baseUrl + `authenticate?access_token=${accessToken}&access_token_secret=${secret}`;
+            let authRet = httpGet(url);
+            if(authRet === "ok") {
+                alert("Logged in to node.js successfully!");
+            }
+            else {
+                alert("Couldn't Login!");
+            }
+        }
+        function loadTweets() {
+            let url = baseUrl +'home';
+            document.getElementById("tweets").innerText = httpGet(url);
+        }
+
+    </script>
+</head>
+<body>
+<button onclick="loadTweets()">Load tweets</button>
+<p id="tweets"></p>
+</body>
+</html>
