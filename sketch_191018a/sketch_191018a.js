@@ -49,6 +49,9 @@ function setup() {
   youtubeButton = createImg('Assets/Youtube.png');
   youtubeButton.position(30, pg.height-420);
   youtubeButton.size(50, 50);
+  
+  //Code to push html button over the camera
+  select('#test', HTMLElement).position(100,100);
 }
 
 function changeBG() {
