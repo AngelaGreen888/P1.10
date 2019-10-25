@@ -71,6 +71,17 @@ function addApps() {
   
 }
 
+function calendar() {
+  textSize(20);
+  textAlign(LEFT, CENTER);
+  rect(30, 30, 150, 50);
+  rect(30, 60, 150, 150);
+  //text('test', 50, 41);
+  text('11/3/2019', 35, 47);
+  text('Get groceries', 35, 78);
+  text('HW4 due', 35, 102);
+}
+
 function time() {
   let h = hour();
   let m = minute();
@@ -107,6 +118,7 @@ function draw() {
   image(pg, 20, 20, 1240, 680);
   time();
   date();
+  calendar();
   if(drawApps == true) {
     c = color(0,0,0,2);
     pg.fill(c);
