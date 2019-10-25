@@ -71,10 +71,42 @@ function addApps() {
   
 }
 
+function time() {
+  let h = hour();
+  let m = minute();
+  
+  textSize(40);
+  textAlign(CENTER, CENTER);
+  
+  if (h > 12) {
+    if (m < 10) {
+      text((hour() - 12) + ':0' + minute(), 650, 50);
+    }
+    else {
+      text((hour() - 12) + ':' + minute(), 650, 50);
+    }
+  }
+  else {
+    if (m < 10) {
+      text(hour() + ':0' + minute(), 650, 50);
+    }
+    else {
+      text(hour() + ':' + minute(), 650, 50);
+    }
+  }
+}
+
+function date() {
+  textSize(40);
+  textAlign(CENTER, CENTER);
+  text(month() + '/' + day() + '/' + year(), 650, 90);
+}
+
 function draw() {
   image(capture, 20, 20, 1240, 680);
   image(pg, 20, 20, 1240, 680);
-  
+  time();
+  date();
   if(drawApps == true) {
     c = color(0,0,0,2);
     pg.fill(c);
