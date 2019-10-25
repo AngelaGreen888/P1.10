@@ -117,7 +117,8 @@ function date() {
 function draw() {
   image(capture, 20, 20, 1240, 680);
   image(pg, 20, 20, 1240, 680);
-  
+  calendar();
+  time();
   if(drawApps == true) {
     c = color(0,0,0,2);
     pg.fill(c);
