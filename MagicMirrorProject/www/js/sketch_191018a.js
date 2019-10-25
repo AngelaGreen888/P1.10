@@ -9,10 +9,25 @@ var youtubeButton;
 
 var drawApps = false;
 
+var dragging = false; // Is the object being dragged?
+var rollover = false; // Is the mouse over the ellipse?
+
+var x, y, w, h;          // Location and size
+var offsetX, offsetY;    // Mouseclick offset
+
 function setup() {
   createCanvas(1280, 720);
   background(0,100,120);
-  
+
+  //testing draggable
+  // Starting location
+  x = 100;
+  y = 100;
+  // Dimensions
+  w = 75;
+  h = 50;
+  //end test
+
   capture = createCapture(VIDEO);
   capture.size(1280, 720);
   capture.hide();
@@ -114,6 +129,21 @@ function date() {
   text(month() + '/' + day() + '/' + year(), 650, 90);
 }
 
+function mousePressed() {
+  // Did I click on the rectangle?
+  if (mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h) {
+    dragging = true;
+    // If so, keep track of relative location of click to corner of rectangle
+    offsetX = x-mouseX;
+    offsetY = y-mouseY;
+  }
+}
+
+function mouseReleased() {
+  // Quit dragging
+  dragging = false;
+}
+
 function draw() {
   image(capture, 20, 20, 1240, 680);
   image(pg, 20, 20, 1240, 680);
@@ -124,6 +154,34 @@ function draw() {
     pg.fill(c);
     pg.rect(0, 0, pg.width, pg.height);
   }
+
+  //testing draggable
+  // Is mouse over object
+  if (mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h) {
+    rollover = true;
+  }
+  else {
+    rollover = false;
+  }
+
+  // Adjust location if being dragged
+  if (dragging) {
+    x = mouseX + offsetX;
+    y = mouseY + offsetY;
+  }
+
+  stroke(0);
+  // Different fill based on state
+  if (dragging) {
+    fill (50);
+  } else if (rollover) {
+    fill(100);
+  } else {
+    fill(175, 200);
+  }
+  rect(x, y, w, h);
+
+  //end test
   
   
 }
