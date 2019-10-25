@@ -12,7 +12,7 @@ var drawApps = false;
 function setup() {
   createCanvas(1280, 720);
   background(0,100,120);
-  
+
   capture = createCapture(VIDEO);
   capture.size(1280, 720);
   capture.hide();
@@ -51,7 +51,7 @@ function setup() {
   youtubeButton.size(50, 50);
   
   //Code to push html button over the camera
-  select('#test', HTMLElement).position(100,100);
+  select('#spotify', HTMLElement).position(30, 400);
   select('#twitter', HTMLElement).position(pg.width-280, pg.height-280);
 }
 
