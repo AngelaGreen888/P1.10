@@ -14,6 +14,7 @@ var rollover = false; // Is the mouse over the ellipse?
 
 var x, y, w, h, xx, yy;          // Location and size
 var offsetX, offsetY, offsetXX, offsetYY;    // Mouseclick offset
+var a, b;
 
 function setup() {
   createCanvas(1280, 720);
@@ -175,7 +176,7 @@ function draw() {
   else {
     rollover = false;
   }
-
+  stroke(0);
   // Adjust location if being dragged
   /*if (dragging) {
     x = mouseX + offsetX;
