@@ -140,8 +140,8 @@ function mousePressed() {
     // If so, keep track of relative location of click to corner of rectangle
     offsetX = x-mouseX;
     offsetY = y-mouseY;
-    offsetXX + xx-mouseX;
-    offsetYY + yy-mouseY;
+    offsetXX = xx-mouseX;
+    offsetYY = yy-mouseY;
   }
 }
 
