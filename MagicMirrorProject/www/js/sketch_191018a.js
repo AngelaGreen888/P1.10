@@ -6,6 +6,8 @@ var plusButton;
 var lightButton;
 var healthButton;
 var youtubeButton;
+var weather;
+var bigWeather;
 
 var drawApps = false;
 var removeCalendar = false;
@@ -72,10 +74,24 @@ function setup() {
 
   select('#spotify', HTMLElement).position(30, 400);
   select('#twitter', HTMLElement).position(pg.width-280, pg.height-280);
-  select('#m-booked-bl-simple-10717', HTMLElement).position(pg.width/2-80, 100);
+  weather = select('#m-booked-bl-simple-10717', HTMLElement).position(pg.width/2-80, 75);
+  weather.mousePressed(expandWeather);
+  bigWeather = select('#m-booked-weather-bl250-84348', HTMLElement).position(pg.width/2-125, 75);
+  bigWeather.hide();
+  bigWeather.mousePressed(minimizeWeather);
 
   calendar();
   time();
+}
+
+function expandWeather() {
+  weather.hide();
+  bigWeather.show();
+}
+
+function minimizeWeather() {
+  bigWeather.hide();
+  weather.show();
 }
 
 function changeBG() {
