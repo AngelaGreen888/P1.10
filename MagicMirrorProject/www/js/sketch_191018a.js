@@ -68,6 +68,7 @@ function setup() {
   //Code to push html button over the camera
   select('#spotify', HTMLElement).position(30, 400);
   select('#twitter', HTMLElement).position(pg.width-280, pg.height-280);
+  select('#m-booked-bl-simple-10717', HTMLElement).position(pg.width/2-80, 100);
 }
 
 function changeBG() {
