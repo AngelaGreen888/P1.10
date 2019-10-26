@@ -8,6 +8,8 @@ var healthButton;
 var youtubeButton;
 
 var drawApps = false;
+var removeCalendar = false;
+var removeTime = false;
 
 var dragging = false; // Is the object being dragged?
 var rollover = false; // Is the mouse over the ellipse?
@@ -39,8 +41,6 @@ function setup() {
   pg = createGraphics(1280, 720);
   pg.background(0, 0, 0, 0);
   pg.noStroke();
-
-  youtubeAppLogo = loadImage('Assets/Youtube.png');
   
   let c = color(255, 204, 0);
   pg.fill(c);
@@ -61,6 +61,7 @@ function setup() {
   healthButton = createImg('Assets/Apple_Health.png');
   healthButton.position(15, pg.height-500);
   healthButton.size(80, 80);
+  healthButton.mousePressed(drawHealth);
   
   c = color(255, 255, 255);
   pg.fill(c);
@@ -68,11 +69,13 @@ function setup() {
   youtubeButton = createImg('Assets/Youtube.png');
   youtubeButton.position(30, pg.height-420);
   youtubeButton.size(50, 50);
-  
-  //Code to push html button over the camera
+
   select('#spotify', HTMLElement).position(30, 400);
   select('#twitter', HTMLElement).position(pg.width-280, pg.height-280);
   select('#m-booked-bl-simple-10717', HTMLElement).position(pg.width/2-80, 100);
+
+  calendar();
+  time();
 }
 
 function changeBG() {
@@ -83,13 +86,38 @@ function changeBG() {
 }
 
 function addApps() {
+  hideAllApps();
+  drawApps = true;
+  
+}
+
+function hideAllApps() {
   plusButton.hide();
   lightButton.hide();
   healthButton.hide();
   youtubeButton.hide();
+  select('#twitter', HTMLElement).hide();
+  select('#spotify', HTMLElement).hide();
+  select('#m-booked-bl-simple-10717', HTMLElement).hide();
   pg.clear();
-  drawApps = true;
-  
+  removeTime = true;
+  removeCalendar = true;
+
+}
+
+function hideHalfApp() {
+  plusButton.hide();
+  lightButton.hide();
+  healthButton.hide();
+  youtubeButton.hide();
+  select('#spotify', HTMLElement).hide();
+  pg.clear();
+  removeCalendar = true;
+}
+
+function drawHealth() {
+  hideHalfApp();
+
 }
 
 function calendar() {
@@ -154,8 +182,13 @@ function mouseReleased() {
 function draw() {
   image(capture, 20, 20, 1240, 680);
   image(pg, 20, 20, 1240, 680);
-  calendar();
-  time();
+  if( removeCalendar == false){
+    calendar();
+  }
+  if( removeTime == false){
+    time();
+  }
+
   if(drawApps == true) {
     c = color(0,0,0,2);
     pg.fill(c);
