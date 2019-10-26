@@ -12,8 +12,8 @@ var drawApps = false;
 var dragging = false; // Is the object being dragged?
 var rollover = false; // Is the mouse over the ellipse?
 
-var x, y, w, h;          // Location and size
-var offsetX, offsetY;    // Mouseclick offset
+var x, y, w, h, xx, yy;          // Location and size
+var offsetX, offsetY, offsetXX, offsetYY;    // Mouseclick offset
 
 function setup() {
   createCanvas(1280, 720);
@@ -21,12 +21,15 @@ function setup() {
 
   //testing draggable
   // Starting location
-  x = 100;
-  y = 100;
+  x = 30;
+  y = 30;
   // Dimensions
-  w = 75;
-  h = 50;
+  w = 150;
+  h = 200;
   //end test
+  //variables for calendar text
+  xx = 35;
+  yy = 40;
 
   capture = createCapture(VIDEO);
   capture.size(1280, 720);
@@ -91,12 +94,12 @@ function addApps() {
 function calendar() {
   textSize(20);
   textAlign(LEFT, CENTER);
-  rect(30, 30, 150, 50);
-  rect(30, 60, 150, 150);
+  //rect(30, 30, 150, 50);
+  rect(x, y, w, h);
   //text('test', 50, 41);
-  text(month() + '/' + day() + '/' +year(), 35, 47);
-  text('Get groceries', 35, 78);
-  text('HW4 due', 35, 102);
+  text(month() + '/' + day() + '/' + year(), xx, yy + 7);
+  text('Get groceries', xx, yy + 38);
+  text('HW4 due', xx, yy + 62);
 }
 
 function time() {
@@ -137,6 +140,8 @@ function mousePressed() {
     // If so, keep track of relative location of click to corner of rectangle
     offsetX = x-mouseX;
     offsetY = y-mouseY;
+    offsetXX + xx-mouseX;
+    offsetYY + yy-mouseY;
   }
 }
 
@@ -160,18 +165,24 @@ function draw() {
   // Is mouse over object
   if (mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h) {
     rollover = true;
+    if (dragging) {
+      x = mouseX + offsetX;
+      y = mouseY + offsetY;
+      xx = mouseX + offsetXX;
+      yy = mouseY + offsetYY;
+    }
   }
   else {
     rollover = false;
   }
 
   // Adjust location if being dragged
-  if (dragging) {
+  /*if (dragging) {
     x = mouseX + offsetX;
     y = mouseY + offsetY;
-  }
+  }*/
 
-  stroke(0);
+  /*stroke(0);
   // Different fill based on state
   if (dragging) {
     fill (50);
@@ -180,7 +191,7 @@ function draw() {
   } else {
     fill(175, 200);
   }
-  rect(x, y, w, h);
+  rect(x, y, w, h);*/
 
   //end test
   
