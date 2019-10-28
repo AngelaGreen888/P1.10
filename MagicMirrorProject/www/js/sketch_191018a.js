@@ -18,7 +18,7 @@ var rollover = false; // Is the mouse over the ellipse?
 
 var x, y, w, h, xx, yy;          // Location and size
 var offsetX, offsetY, offsetXX, offsetYY;    // Mouseclick offset
-var a, b;
+var a, b, d, e;
 
 function setup() {
   createCanvas(1280, 720);
@@ -26,11 +26,18 @@ function setup() {
 
   //testing draggable
   // Starting location
+  //calendar
   x = 30;
   y = 30;
+  //weather
+  a = 15;
+  b = 500;
   // Dimensions
   w = 150;
   h = 200;
+  //weather
+  d = 80;
+  e = 80;
   //end test
   //variables for calendar text
   xx = 35;
@@ -250,6 +257,11 @@ function mousePressed() {
     offsetXX = xx-mouseX;
     offsetYY = yy-mouseY;
   }
+  if (mouseX > a && mouseX < a + d && mouseY > b && mouseY < b + e) {
+    dragging = true;
+    offsetX = a-mouseX;
+    offsetY = b-mouseY;
+  }
 }
 
 function mouseReleased() {
@@ -274,6 +286,7 @@ function draw() {
   }
 
   //testing draggable
+  //calendar draggable
   // Is mouse over object
   if (mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h) {
     rollover = true;
@@ -282,6 +295,13 @@ function draw() {
       y = mouseY + offsetY;
       xx = mouseX + offsetXX;
       yy = mouseY + offsetYY;
+    }
+  }
+  else if (mouseX > a && mouseX < a + d && mouseY > b && mouseY < b + e) {
+    rollover = true;
+    if (dragging) {
+      a = mouseX + offsetX;
+      b = mouseY + offsetY;
     }
   }
   else {
