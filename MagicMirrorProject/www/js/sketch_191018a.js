@@ -270,7 +270,11 @@ function mouseReleased() {
 }
 
 function draw() {
+  translate(width, 0);
+  scale(-1, 1);
   image(capture, 20, 20, 1240, 680);
+  translate(width, 0);
+  scale(-1, 1);
   image(pg, 20, 20, 1240, 680);
   if( removeCalendar == false){
     calendar();
