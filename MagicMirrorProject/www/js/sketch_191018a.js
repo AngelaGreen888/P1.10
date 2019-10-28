@@ -104,8 +104,51 @@ function changeBG() {
 function addApps() {
   hideAllApps();
   drawApps = true;
+
+  health2Button = createImg('Assets/Apple_Health.png');
+  health2Button.position(45, pg.height-675);
+  health2Button.size(50, 50);
+
+  youtube2Button = createImg('Assets/Youtube.png');
+  youtube2Button.position(45, pg.height-610);
+  youtube2Button.size(50, 50);
+
+  emailButton = createImg('Assets/E_Mail.png');
+  emailButton.position(45, pg.height-545);
+  emailButton.size(50, 50);
+
+  facebookButton = createImg('Assets/Facebook.png');
+  facebookButton.position(45, pg.height-480);
+  facebookButton.size(50, 50);
+
+  instagramButton = createImg('Assets/Instagram.png');
+  instagramButton.position(45, pg.height-415);
+  instagramButton.size(50, 50);
+
+  linkedInButton = createImg('Assets/Linkedin.png');
+  linkedInButton.position(45, pg.height-350);
+  linkedInButton.size(50, 50);
+
+  snapchatButton = createImg('Assets/Snapchat.png');
+  snapchatButton.position(45, pg.height-285);
+  snapchatButton.size(50, 50);
+
+  spotifyButton = createImg('Assets/Spotify.png');
+  spotifyButton.position(45, pg.height-220);
+  spotifyButton.size(50, 50);
+
+  telegramButton = createImg('Assets/Telegram.png');
+  telegramButton.position(45, pg.height-155);
+  telegramButton.size(50, 50);
+
+  twitterButton = createImg('Assets/Twitter.png');
+  twitterButton.position(45, pg.height-90);
+  twitterButton.size(50, 50);
   
+
 }
+
+
 
 function hideAllApps() {
   plusButton.hide();
