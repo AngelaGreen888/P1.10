@@ -144,8 +144,27 @@ function addApps() {
   twitterButton = createImg('Assets/Twitter.png');
   twitterButton.position(45, pg.height-90);
   twitterButton.size(50, 50);
-  
 
+  backButton = createButton('back');
+  backButton.position(1200, pg.height-50);
+  backButton.size(50, 10);
+  backButton.mousePressed(backToMirror);
+
+}
+
+function backToMirror(){
+  setup();
+  health2Button.hide();
+  youtube2Button.hide();
+  emailButton.hide();
+  facebookButton.hide();
+  instagramButton.hide();
+  linkedInButton.hide();
+  snapchatButton.hide();
+  spotifyButton.hide();
+  telegramButton.hide();
+  twitterButton.hide();
+  backButton.hide();
 }
 
 
