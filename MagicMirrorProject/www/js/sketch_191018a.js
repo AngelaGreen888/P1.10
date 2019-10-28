@@ -12,6 +12,7 @@ var bigWeather;
 var drawApps = false;
 var removeCalendar = false;
 var removeTime = false;
+var drawHealthApp = false;
 
 var dragging = false; // Is the object being dragged?
 var rollover = false; // Is the mouse over the ellipse?
@@ -214,7 +215,7 @@ function hideHalfApp() {
 
 function drawHealth() {
   hideHalfApp();
-
+  drawHealthApp = true;
 }
 
 function calendar() {
@@ -293,6 +294,25 @@ function draw() {
   }
   if( removeTime == false){
     time();
+  }
+  if( drawHealthApp == true ){
+    strokeWeight(0);
+    fill('rgba(31,31,31,0.75)' );
+    circle(120, 125, 90);
+    circle(320, 225, 90);
+    circle(320, 475, 90);
+    circle(120, 375, 90);
+
+    strokeWeight(1);
+    fill(255);
+    textSize(20);
+    textFont('Helvetica Neue');
+    text('Sleep', 120, 65);
+    text('Weight', 320, 165);
+    text('Mirror Time', 320, 420);
+    textSize(16);
+    text('Calories Burned', 120, 325);
+
   }
 
   //testing draggable
