@@ -165,6 +165,16 @@ function backToMirror(){
   telegramButton.hide();
   twitterButton.hide();
   backButton.hide();
+
+  plusButton.show();
+  lightButton.show();
+  healthButton.show();
+  youtubeButton.show();
+  select('#twitter', HTMLElement).show();
+  select('#spotify', HTMLElement).show();
+  select('#m-booked-bl-simple-10717', HTMLElement).show();
+  removeTime = false;
+  removeCalendar = false;
 }
 
 
@@ -177,7 +187,9 @@ function hideAllApps() {
   select('#twitter', HTMLElement).hide();
   select('#spotify', HTMLElement).hide();
   select('#m-booked-bl-simple-10717', HTMLElement).hide();
+  select('#m-booked-weather-bl250-84348', HTMLElement).position(pg.width/2-125, 75).hide();
   pg.clear();
+  pg.background(0, 0, 0, 150);
   removeTime = true;
   removeCalendar = true;
 
@@ -265,12 +277,6 @@ function draw() {
   }
   if( removeTime == false){
     time();
-  }
-
-  if(drawApps == true) {
-    c = color(0,0,0,2);
-    pg.fill(c);
-    pg.rect(0, 0, pg.width, pg.height);
   }
 
   //testing draggable
