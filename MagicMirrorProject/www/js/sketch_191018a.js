@@ -315,7 +315,8 @@ function draw() {
     textSize(40);
     text('8:32 hrs', 120, 125);
     text('248 lbs', 320, 225);
-
+    text('680 cal', 120, 380);
+    
   }
 
   //testing draggable
