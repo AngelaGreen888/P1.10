@@ -184,7 +184,19 @@ function backToMirror(){
   removeCalendar = false;
 }
 
-
+function backToBlank(){
+  setup();
+  plusButton.show();
+  lightButton.show();
+  healthButton.show();
+  youtubeButton.show();
+  backButton.hide();
+  select('#twitter', HTMLElement).show();
+  select('#spotify', HTMLElement).show();
+  select('#m-booked-bl-simple-10717', HTMLElement).show();
+  removeTime = false;
+  removeCalendar = false;
+}
 
 function hideAllApps() {
   plusButton.hide();
@@ -226,7 +238,7 @@ function drawHealth() {
   backButton = createButton('back');
   backButton.position(30, pg.height-50);
   backButton.size(50, 10);
-  backButton.mousePressed(backToMirror);
+  backButton.mousePressed(backToBlank);
 
   strokeWeight(1);
   pg.fill(255);
