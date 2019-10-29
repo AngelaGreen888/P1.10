@@ -313,7 +313,7 @@ function draw() {
     textSize(16);
     text('Calories Burned', 120, 325);
     textSize(40);
-
+    text('8:32 hrs', 120, 125);
 
   }
 
