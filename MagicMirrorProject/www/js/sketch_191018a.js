@@ -314,6 +314,7 @@ function draw() {
     text('Calories Burned', 120, 325);
     textSize(40);
     text('8:32 hrs', 120, 125);
+    text('248 lbs', 320, 225);
 
   }
 
