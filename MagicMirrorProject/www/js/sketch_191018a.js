@@ -312,6 +312,8 @@ function draw() {
     text('Mirror Time', 320, 420);
     textSize(16);
     text('Calories Burned', 120, 325);
+    textSize(40);
+
 
   }
 
