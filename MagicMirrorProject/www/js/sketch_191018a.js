@@ -12,7 +12,6 @@ var bigWeather;
 var drawApps = false;
 var removeCalendar = false;
 var removeTime = false;
-var drawHealthApp = false;
 
 var dragging = false; // Is the object being dragged?
 var rollover = false; // Is the mouse over the ellipse?
@@ -216,6 +215,34 @@ function hideHalfApp() {
 function drawHealth() {
   hideHalfApp();
   drawHealthApp = true;
+
+  strokeWeight(0);
+  pg.fill('rgba(31,31,31,0.75)' );
+  pg.circle(105, 110, 90);
+  pg.circle(310, 210, 90);
+  pg.circle(305, 475, 90);
+  pg.circle(105, 375, 90);
+
+  backButton = createButton('back');
+  backButton.position(30, pg.height-50);
+  backButton.size(50, 10);
+  backButton.mousePressed(backToMirror);
+
+  strokeWeight(1);
+  pg.fill(255);
+  pg.textSize(20);
+  pg.textFont('Helvetica Neue');
+  pg.text('Sleep', 80, 65);
+  pg.text('Weight', 280, 165);
+  pg.text('Mirror Time', 255, 425);
+  pg.textSize(16);
+  pg.text('Calories Burned', 48, 330);
+  pg.textSize(40);
+  pg.text('8:32 hrs', 35, 125);
+  pg.text('248 lbs', 245, 225);
+  pg.text('680 cal', 40, 390);
+  pg.textSize(30);
+  pg.text("2:" +minute() + ":" + second() + " hrs", 235, 480);
 }
 
 function calendar() {
@@ -294,30 +321,6 @@ function draw() {
   }
   if( removeTime == false){
     time();
-  }
-  if( drawHealthApp == true ){
-    strokeWeight(0);
-    fill('rgba(31,31,31,0.75)' );
-    circle(120, 125, 90);
-    circle(320, 225, 90);
-    circle(320, 475, 90);
-    circle(120, 375, 90);
-
-    strokeWeight(1);
-    fill(255);
-    textSize(20);
-    textFont('Helvetica Neue');
-    text('Sleep', 120, 65);
-    text('Weight', 320, 165);
-    text('Mirror Time', 320, 420);
-    textSize(16);
-    text('Calories Burned', 120, 325);
-    textSize(40);
-    text('8:32 hrs', 120, 125);
-    text('248 lbs', 320, 225);
-    text('680 cal', 120, 380);
-    textSize(30);
-    text("2:" +minute() + ":" + second() + " hrs", 320, 480);
   }
 
   //testing draggable
