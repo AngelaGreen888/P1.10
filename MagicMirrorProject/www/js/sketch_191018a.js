@@ -80,7 +80,8 @@ function setup() {
   youtubeButton.size(50, 50);
 
   select('#spotify', HTMLElement).position(30, 400);
-  select('#twitter', HTMLElement).position(pg.width-280, pg.height-280);
+  select('#twitter', HTMLElement).position(pg.width-280, pg.height-230);
+  select('#fgid_c594f4542f3268d5003c41ac8', HTMLElement).position(pg.width-280, pg.height-460)
   weather = select('#m-booked-bl-simple-10717', HTMLElement).position(pg.width/2-80, 75);
   weather.mousePressed(expandWeather);
   bigWeather = select('#m-booked-weather-bl250-84348', HTMLElement).position(pg.width/2-125, 75);
@@ -179,6 +180,7 @@ function backToMirror(){
   youtubeButton.show();
   select('#twitter', HTMLElement).show();
   select('#spotify', HTMLElement).show();
+  select('#fgid_c594f4542f3268d5003c41ac8', HTMLElement).show();
   select('#m-booked-bl-simple-10717', HTMLElement).show();
   removeTime = false;
   removeCalendar = false;
@@ -193,6 +195,7 @@ function backToBlank(){
   backButton.hide();
   select('#twitter', HTMLElement).show();
   select('#spotify', HTMLElement).show();
+  select('#fgid_c594f4542f3268d5003c41ac8', HTMLElement).show();
   select('#m-booked-bl-simple-10717', HTMLElement).show();
   removeTime = false;
   removeCalendar = false;
@@ -205,6 +208,7 @@ function hideAllApps() {
   youtubeButton.hide();
   select('#twitter', HTMLElement).hide();
   select('#spotify', HTMLElement).hide();
+  select('#fgid_c594f4542f3268d5003c41ac8', HTMLElement).hide();
   select('#m-booked-bl-simple-10717', HTMLElement).hide();
   select('#m-booked-weather-bl250-84348', HTMLElement).position(pg.width/2-125, 75).hide();
   pg.clear();
