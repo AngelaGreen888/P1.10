@@ -71,15 +71,8 @@ function setup() {
   healthButton.position(15, pg.height-500);
   healthButton.size(80, 80);
   healthButton.mousePressed(drawHealth);
-  
-  c = color(255, 255, 255);
-  pg.fill(c);
-  pg.square(9, pg.height-425, 55, 0, 16);
-  youtubeButton = createImg('Assets/Youtube.png');
-  youtubeButton.position(30, pg.height-420);
-  youtubeButton.size(50, 50);
 
-  select('#spotify', HTMLElement).position(30, 400);
+  select('#spotify', HTMLElement).position(30, pg.height-240);
   select('#twitter', HTMLElement).position(pg.width-280, pg.height-230);
   select('#fgid_c594f4542f3268d5003c41ac8', HTMLElement).position(pg.width-280, pg.height-460)
   weather = select('#m-booked-bl-simple-10717', HTMLElement).position(pg.width/2-80, 75);
@@ -177,7 +170,6 @@ function backToMirror(){
   plusButton.show();
   lightButton.show();
   healthButton.show();
-  youtubeButton.show();
   select('#twitter', HTMLElement).show();
   select('#spotify', HTMLElement).show();
   select('#fgid_c594f4542f3268d5003c41ac8', HTMLElement).show();
@@ -191,7 +183,6 @@ function backToBlank(){
   plusButton.show();
   lightButton.show();
   healthButton.show();
-  youtubeButton.show();
   backButton.hide();
   select('#twitter', HTMLElement).show();
   select('#spotify', HTMLElement).show();
@@ -205,7 +196,6 @@ function hideAllApps() {
   plusButton.hide();
   lightButton.hide();
   healthButton.hide();
-  youtubeButton.hide();
   select('#twitter', HTMLElement).hide();
   select('#spotify', HTMLElement).hide();
   select('#fgid_c594f4542f3268d5003c41ac8', HTMLElement).hide();
@@ -222,7 +212,6 @@ function hideHalfApp() {
   plusButton.hide();
   lightButton.hide();
   healthButton.hide();
-  youtubeButton.hide();
   select('#spotify', HTMLElement).hide();
   pg.clear();
   removeCalendar = true;
