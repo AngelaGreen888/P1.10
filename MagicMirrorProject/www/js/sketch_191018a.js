@@ -5,13 +5,18 @@ let plus;
 var plusButton;
 var lightButton;
 var healthButton;
-var youtubeButton;
 var weather;
 var bigWeather;
 
 var drawApps = false;
 var removeCalendar = false;
 var removeTime = false;
+
+var displayHealth = false;
+var sleepHealth = true;
+var weightHealth = true;
+var caloriesHealth = true;
+var workOutHealth = false;
 
 var dragging = false; // Is the object being dragged?
 var rollover = false; // Is the mouse over the ellipse?
@@ -70,7 +75,7 @@ function setup() {
   healthButton = createImg('Assets/Apple_Health.png');
   healthButton.position(15, pg.height-500);
   healthButton.size(80, 80);
-  healthButton.mousePressed(drawHealth);
+  healthButton.mousePressed(setUpHealth);
 
   select('#spotify', HTMLElement).position(30, pg.height-240);
   select('#twitter', HTMLElement).position(pg.width-280, pg.height-230);
@@ -217,39 +222,6 @@ function hideHalfApp() {
   removeCalendar = true;
 }
 
-function drawHealth() {
-  hideHalfApp();
-  drawHealthApp = true;
-
-  strokeWeight(0);
-  pg.fill('rgba(31,31,31,0.75)' );
-  pg.circle(105, 110, 90);
-  pg.circle(310, 210, 90);
-  pg.circle(305, 475, 90);
-  pg.circle(105, 375, 90);
-
-  backButton = createButton('back');
-  backButton.position(30, pg.height-50);
-  backButton.size(50, 10);
-  backButton.mousePressed(backToBlank);
-
-  strokeWeight(1);
-  pg.fill(255);
-  pg.textSize(20);
-  pg.textFont('Helvetica Neue');
-  pg.text('Sleep', 80, 65);
-  pg.text('Weight', 280, 165);
-  pg.text('Mirror Time', 255, 425);
-  pg.textSize(16);
-  pg.text('Calories Burned', 48, 330);
-  pg.textSize(40);
-  pg.text('8:32 hrs', 35, 125);
-  pg.text('248 lbs', 245, 225);
-  pg.text('680 cal', 40, 390);
-  pg.textSize(30);
-  pg.text("2:" +minute() + ":" + second() + " hrs", 235, 480);
-}
-
 function calendar() {
   textSize(20);
   textAlign(LEFT, CENTER);
@@ -293,21 +265,43 @@ function date() {
 }
 
 function mousePressed() {
-  // Did I click on the rectangle?
-  if (mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h) {
-    dragging = true;
-    // If so, keep track of relative location of click to corner of rectangle
-    offsetX = x-mouseX;
-    offsetY = y-mouseY;
-    offsetXX = xx-mouseX;
-    offsetYY = yy-mouseY;
+  if(displayHealth == true){
+    let d = dist(mouseX, mouseY, 105, 110);
+    if (d < 90) {
+      sleepHealth = !sleepHealth;
+      drawHealth();
+    }
+    let a = dist(mouseX, mouseY, 310, 210);
+    if (a < 90) {
+      weightHealth = !weightHealth;
+      drawHealth();
+    }
+    let b = dist(mouseX, mouseY, 105, 375);
+    if (b < 90) {
+      if( caloriesHealth == false){
+        workOutHealth = !workOutHealth;
+      }
+      caloriesHealth = !caloriesHealth;
+      drawHealth();
+    }
   }
-  if (mouseX > a && mouseX < a + d && mouseY > b && mouseY < b + e) {
-    dragging = true;
-    offsetX = a-mouseX;
-    offsetY = b-mouseY;
-  }
+  else{
+    // Did I click on the rectangle?
+    if (mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h) {
+      dragging = true;
+      // If so, keep track of relative location of click to corner of rectangle
+      offsetX = x-mouseX;
+      offsetY = y-mouseY;
+      offsetXX = xx-mouseX;
+      offsetYY = yy-mouseY;
+    }
+    if (mouseX > a && mouseX < a + d && mouseY > b && mouseY < b + e) {
+      dragging = true;
+      offsetX = a-mouseX;
+      offsetY = b-mouseY;
+    }}
 }
+
 
 function mouseReleased() {
   // Quit dragging
@@ -369,6 +363,87 @@ function draw() {
   rect(x, y, w, h);*/
 
   //end test
-  
-  
 }
+
+
+function drawCircles(){
+  strokeWeight(0);
+  pg.fill('rgba(31,31,31,0.75)' );
+  pg.circle(105, 110, 90);
+  pg.circle(310, 210, 90);
+  pg.circle(305, 475, 90);
+  pg.circle(105, 375, 90);
+}
+function setUpHealth() {
+  hideHalfApp();
+  displayHealth = true;
+
+  backButton = createButton('back');
+  backButton.position(30, pg.height-50);
+  backButton.size(50, 10);
+  backButton.mousePressed(backToBlank);
+
+  drawHealth();
+}
+function drawHealth() {
+  hideHalfApp();
+  drawCircles();
+
+  strokeWeight(1);
+  pg.fill(255);
+  pg.textSize(20);
+  pg.textFont('Helvetica Neue');
+  pg.text('Mirror Time', 255, 425);
+  pg.textSize(30);
+  pg.text("2:" +minute() + ":" + second() + " hrs", 235, 480);
+
+  if(sleepHealth == true){
+    pg.textSize(20);
+    pg.text('Sleep', 80, 60);
+    pg.textSize(40);
+    pg.text('8:32 hrs', 35, 125);
+  }
+  else{
+    pg.textSize(20);
+    pg.text('Last Week\'s\n   Average', 55, 60);
+    pg.textSize(40);
+    pg.text('5:32 hrs', 35, 125);
+  }
+  if(weightHealth == true){
+    pg.textSize(20);
+    pg.text('Weight', 280, 160);
+    pg.textSize(40);
+    pg.text('248 lbs', 245, 225);
+  }
+  else{
+    pg.textSize(20);
+    pg.text('Last Week\'s\n   Average', 255, 160);
+    pg.textSize(40);
+    pg.text('255 lbs', 245, 225);
+  }
+  if(caloriesHealth == true && workOutHealth==false){
+    pg.textSize(20);
+    pg.text('Steps', 80, 325);
+    pg.textSize(40);
+    pg.text('4503', 60, 390);
+  }
+  else if (caloriesHealth == false && workOutHealth==false ){
+    pg.textSize(20);
+    pg.text('Stood', 80, 325);
+    pg.textSize(40);
+    pg.text('9:43 hrs', 35, 390);
+  }
+  else if (caloriesHealth == true && workOutHealth==true) {
+    pg.textSize(20);
+    pg.text('Workout Time', 45, 325);
+    pg.textSize(40);
+    pg.text('9:43 hrs', 35, 390);
+  }
+  else {
+    pg.textSize(20);
+    pg.text('Graph', 80, 325);
+  }
+}
+
+
+
