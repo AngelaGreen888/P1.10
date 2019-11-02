@@ -7,7 +7,6 @@ var healthButton;
 var weather;
 var bigWeather;
 
-var drawApps = false;
 var removeCalendar = false;
 var removeTime = false;
 
@@ -16,6 +15,17 @@ var sleepHealth = true;
 var weightHealth = true;
 var caloriesHealth = true;
 var workOutHealth = false;
+
+var health = false;
+var youtube = false;
+var mail = false;
+var facebook = false;
+var instagram = false;
+var linkdin = false;
+var snapchat = false;
+var spotify = false;
+var messaging = false;
+var twitter = false;
 
 var dragging = false; // Is the object being dragged?
 var rollover = false; // Is the mouse over the ellipse?
@@ -117,117 +127,62 @@ function changeBG() {
 
 function addApps() {
   hideAllApps();
-  drawApps = true;
 
   health2Button = createImg('Assets/Apple_Health.png');
   health2Button.position(45, pg.height-675);
   health2Button.size(50, 50);
+  health2Button.mousePressed(function () {addAppsToHomePage("Health");});
 
   youtube2Button = createImg('Assets/Youtube.png');
   youtube2Button.position(45, pg.height-610);
   youtube2Button.size(50, 50);
+  youtube2Button.mousePressed(function () {addAppsToHomePage("Youtube");});
 
   emailButton = createImg('Assets/E_Mail.png');
   emailButton.position(45, pg.height-545);
   emailButton.size(50, 50);
+  emailButton.mousePressed(function () {addAppsToHomePage("Email");});
 
   facebookButton = createImg('Assets/Facebook.png');
   facebookButton.position(45, pg.height-480);
   facebookButton.size(50, 50);
+  facebookButton.mousePressed(function () {addAppsToHomePage("Facebook");});
 
   instagramButton = createImg('Assets/Instagram.png');
   instagramButton.position(45, pg.height-415);
   instagramButton.size(50, 50);
+  instagramButton.mousePressed(function () {addAppsToHomePage("Instagram");});
 
   linkedInButton = createImg('Assets/Linkedin.png');
   linkedInButton.position(45, pg.height-350);
   linkedInButton.size(50, 50);
+  linkedInButton.mousePressed(function () {addAppsToHomePage("LinkedIn");});
 
   snapchatButton = createImg('Assets/Snapchat.png');
   snapchatButton.position(45, pg.height-285);
   snapchatButton.size(50, 50);
+  snapchatButton.mousePressed(function () {addAppsToHomePage("Snapchat");});
 
   spotifyButton = createImg('Assets/Spotify.png');
   spotifyButton.position(45, pg.height-220);
   spotifyButton.size(50, 50);
+  spotifyButton.mousePressed(function () {addAppsToHomePage("Spotify");});
 
   telegramButton = createImg('Assets/Telegram.png');
   telegramButton.position(45, pg.height-155);
   telegramButton.size(50, 50);
+  telegramButton.mousePressed(function () {addAppsToHomePage("Messaging");});
 
   twitterButton = createImg('Assets/Twitter.png');
   twitterButton.position(45, pg.height-90);
   twitterButton.size(50, 50);
+  twitterButton.mousePressed(function () {addAppsToHomePage("Twitter");});
 
   backButton = createButton('back');
   backButton.position(1200, pg.height-50);
   backButton.size(50, 10);
   backButton.mousePressed(backToMirror);
 
-}
-
-function backToMirror(){
-  setup();
-  health2Button.hide();
-  youtube2Button.hide();
-  emailButton.hide();
-  facebookButton.hide();
-  instagramButton.hide();
-  linkedInButton.hide();
-  snapchatButton.hide();
-  spotifyButton.hide();
-  telegramButton.hide();
-  twitterButton.hide();
-  backButton.hide();
-
-  plusButton.show();
-  select('#custom', HTMLElement).show();
-  healthButton.show();
-  select('#twitter', HTMLElement).show();
-  select('#spotify', HTMLElement).show();
-  select('#fgid_c594f4542f3268d5003c41ac8', HTMLElement).show();
-  select('#m-booked-bl-simple-10717', HTMLElement).show();
-  removeTime = false;
-  removeCalendar = false;
-}
-
-function backToBlank(){
-  setup();
-  plusButton.show();
-  select('#custom', HTMLElement).show();
-  healthButton.show();
-  backButton.hide();
-  select('#twitter', HTMLElement).show();
-  select('#spotify', HTMLElement).show();
-  select('#fgid_c594f4542f3268d5003c41ac8', HTMLElement).show();
-  select('#m-booked-bl-simple-10717', HTMLElement).show();
-  removeTime = false;
-  removeCalendar = false;
-}
-
-function hideAllApps() {
-  plusButton.hide();
-  select('#custom', HTMLElement).hide();
-  healthButton.hide();
-  select('#twitter', HTMLElement).hide();
-  select('#spotify', HTMLElement).hide();
-  select('#fgid_c594f4542f3268d5003c41ac8', HTMLElement).hide();
-  select('#m-booked-bl-simple-10717', HTMLElement).hide();
-  select('#m-booked-weather-bl250-84348', HTMLElement).position(pg.width/2-125, 75).hide();
-  pg.clear();
-  pg.background(0, 0, 0, 150);
-  removeTime = true;
-  removeCalendar = true;
-
-}
-
-function hideHalfApp() {
-  plusButton.hide();
-  select('#custom', HTMLElement).hide();
-  healthButton.hide();
-  select('#spotify', HTMLElement).hide();
-  pg.clear();
-  removeCalendar = true;
 }
 
 function calendar() {
@@ -373,6 +328,9 @@ function draw() {
   //end test
 }
 
+// ---------------------------------------------------------------
+// D R A W   H E A L T H   I N F O
+// ---------------------------------------------------------------
 
 function drawCircles(){
   strokeWeight(0);
@@ -382,6 +340,7 @@ function drawCircles(){
   pg.circle(305, 475, 90);
   pg.circle(105, 375, 90);
 }
+
 function setUpHealth() {
   hideHalfApp();
   displayHealth = true;
@@ -393,6 +352,7 @@ function setUpHealth() {
 
   drawHealth();
 }
+
 function drawHealth() {
   hideHalfApp();
   drawCircles();
@@ -451,6 +411,202 @@ function drawHealth() {
     pg.textSize(20);
     pg.text('Graph', 80, 325);
   }
+}
+
+function backToBlank(){
+  setup();
+  plusButton.show();
+  select('#custom', HTMLElement).show();
+  healthButton.show();
+  backButton.hide();
+  select('#twitter', HTMLElement).show();
+  select('#spotify', HTMLElement).show();
+  select('#fgid_c594f4542f3268d5003c41ac8', HTMLElement).show();
+  select('#m-booked-bl-simple-10717', HTMLElement).show();
+  removeTime = false;
+  removeCalendar = false;
+  displayHealth = false;
+}
+
+function hideHalfApp() {
+  plusButton.hide();
+  select('#custom', HTMLElement).hide();
+  healthButton.hide();
+  select('#spotify', HTMLElement).hide();
+  pg.clear();
+  removeCalendar = true;
+}
+
+// ---------------------------------------------------------------
+// A D D   A P P S   T O    H O M E P A G E
+// ---------------------------------------------------------------
+
+function addAppsToHomePage (name) {
+  print("%s", name);
+ switch(name) {
+   case "Health":
+     health = true;
+     backToMirror();
+     break;
+   case "Youtube":
+     youtube = true;
+     backToMirror();
+     break;
+   case "Mail":
+     mail = true;
+     backToMirror();
+     break;
+   case "Facebook":
+     facebook = true;
+     backToMirror();
+     break;
+   case "Instagram":
+     instagram = true;
+     backToMirror();
+     break;
+   case "LinkedIn":
+     linkdin = true;
+     backToMirror();
+     break;
+   case "Snapchat":
+     snapchat = true;
+     backToMirror();
+     break;
+   case "Spotify":
+     spotify = true;
+     backToMirror();
+     break;
+   case "Messaging":
+     messaging = true;
+     backToMirror();
+     break;
+   case "Twitter":
+     twitter = true;
+     backToMirror();
+     break;
+ };
+}
+
+function backToMirror(){
+  setup();
+  if(health == true){
+        health2Button.position(pg.width/2, pg.height/2);
+  }
+  else{
+  health2Button.hide();
+  }
+  if(youtube == true){
+    youtube2Button.position(pg.width/2, pg.height/2);
+  }
+  else{
+    youtube2Button.hide();
+  }
+  if(mail == true){
+        emailButton.position(pg.width/2, pg.height/2);
+  }
+  else{
+  emailButton.hide();
+  }
+  if(facebook == true){
+        facebookButton.position(pg.width/2, pg.height/2);
+  }
+  else{
+  facebookButton.hide();
+  }
+  if(instagram == true){
+        instagramButton.position(pg.width/2, pg.height/2);
+  }
+  else{
+  instagramButton.hide();
+  }
+  if(linkdin == true){
+        linkedInButton.position(pg.width/2, pg.height/2);
+  }
+  else{
+  linkedInButton.hide();
+  }
+  if(snapchat == true){
+        snapchatButton.position(pg.width/2, pg.height/2);
+  }
+  else{
+  snapchatButton.hide();
+  }
+  if(spotify == true){
+        spotifyButton.position(pg.width/2, pg.height/2);
+  }
+  else{
+  spotifyButton.hide();
+  }
+
+  if(messaging == true){
+        telegramButton.position(pg.width/2, pg.height/2);
+  }
+  else{
+  telegramButton.hide();
+  }
+  if(twitter == true){
+        twitterButton.position(pg.width/2, pg.height/2);
+  }
+  else{
+  twitterButton.hide();
+  }
+  backButton.hide();
+  plusButton.show();
+  select('#custom', HTMLElement).show();
+  healthButton.show();
+  select('#twitter', HTMLElement).show();
+  select('#spotify', HTMLElement).show();
+  select('#fgid_c594f4542f3268d5003c41ac8', HTMLElement).show();
+  select('#m-booked-bl-simple-10717', HTMLElement).show();
+  removeTime = false;
+  removeCalendar = false;
+}
+
+function hideAllApps() {
+  if(health == true){
+    health2Button.hide();
+  }
+  if(youtube == true){
+    youtube2Button.hide();
+  }
+  if(mail == true){
+    emailButton.hide();
+  }
+  if(facebook == true){
+    facebookButton.hide();
+  }
+  if(instagram == true){
+    instagramButton.hide();
+  }
+  if(linkdin == true){
+    linkedInButton.hide();
+  }
+  if(snapchat == true){
+    snapchatButton.hide();
+  }
+  if(spotify == true){
+    spotifyButton.hide();
+  }
+  if(messaging == true){
+    telegramButton.hide();
+  }
+  if(twitter == true){
+    twitterButton.hide();
+  }
+
+  plusButton.hide();
+  select('#custom', HTMLElement).hide();
+  healthButton.hide();
+  select('#twitter', HTMLElement).hide();
+  select('#spotify', HTMLElement).hide();
+  select('#fgid_c594f4542f3268d5003c41ac8', HTMLElement).hide();
+  select('#m-booked-bl-simple-10717', HTMLElement).hide();
+  select('#m-booked-weather-bl250-84348', HTMLElement).position(pg.width/2-125, 75).hide();
+  pg.clear();
+  pg.background(0, 0, 0, 150);
+  removeTime = true;
+  removeCalendar = true;
+
 }
 
 
