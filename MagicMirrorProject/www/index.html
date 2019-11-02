@@ -37,6 +37,7 @@
             <script src="gridstack.js"></script>
             <script src="gridstack.jQueryUI.js"></script>
             <script src="gridstack.all.js"></script>
+            <script src="../node_modules/vanilla-picker/dist/vanilla-picker.js"></script>
         </head>
 
     <body>
@@ -229,7 +230,10 @@
         <script type="text/javascript"> var css_file=document.createElement("link"); css_file.setAttribute("rel","stylesheet"); css_file.setAttribute("type","text/css"); css_file.setAttribute("href",'https://s.bookcdn.com/css/w/booked-wzs-widget-275.css?v=0.0.1'); document.getElementsByTagName("head")[0].appendChild(css_file); function setWidgetData(data) { if(typeof(data) != 'undefined' && data.results.length > 0) { for(var i = 0; i < data.results.length; ++i) { var objMainBlock = document.getElementById('m-booked-weather-bl250-84348'); if(objMainBlock !== null) { var copyBlock = document.getElementById('m-bookew-weather-copy-'+data.results[i].widget_type); objMainBlock.innerHTML = data.results[i].html_code; if(copyBlock !== null) objMainBlock.appendChild(copyBlock); } } } else { alert('data=undefined||data.results is empty'); } } </script> <script type="text/javascript" charset="UTF-8" src="https://widgets.booked.net/weather/info?action=get_weather_info&ver=6&cityID=2289&type=3&scode=2&ltid=3458&domid=w209&anc_id=16042&cmetric=0&wlangID=1&color=2f5175&wwidth=250&header_color=ffffff&text_color=333333&link_color=08488D&border_form=1&footer_color=ffffff&footer_text_color=333333&transparent=0"></script>
         <!-- weather widget end -->
 
+        <a href="#" class="button" id="custom"><img src="Assets/light_bulb.png" height="31" width="31"></a>
+
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/sketch_191018a.js"></script>
+
     </body>
 </html>

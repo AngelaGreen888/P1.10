@@ -25,10 +25,25 @@ var x, y, w, h, xx, yy;          // Location and size
 var offsetX, offsetY, offsetXX, offsetYY;    // Mouseclick offset
 var a, b, d, e;
 
+var colorBack = 'violet';
+function $(selector) { return document.querySelector(selector); }
+const parentCustom = $('#custom'),
+    popupCustom = new Picker({
+      parent: parentCustom,
+      popup: 'top',
+      color: 'violet',
+      //alpha: false,
+      //editor: false,
+      editorFormat: 'rgb',
+      onDone: function(color) {
+        colorBack = color.rgbaString;
+        changeBG();
+      },
+    });
+
 function setup() {
   createCanvas(1280, 720);
-  background(0,100,120);
-
+  background(colorBack);
   //testing draggable
   // Starting location
   //calendar
@@ -67,10 +82,7 @@ function setup() {
   c = color(255, 204, 0);
   pg.fill(c);
   pg.circle(80, pg.height-30, 20);
-  lightButton = createImg('Assets/Light_Bulb.png');
-  lightButton.position(82, pg.height-64);
-  lightButton.size(31, 31);
-  lightButton.mousePressed(changeBG);
+  select('#custom', HTMLElement).position(82, pg.height-64);
   
   healthButton = createImg('Assets/Apple_Health.png');
   healthButton.position(15, pg.height-500);
@@ -101,10 +113,7 @@ function minimizeWeather() {
 }
 
 function changeBG() {
-  val1 = random(255);
-  val2 = random(255);
-  val3 = random(255);
-  background(val1, val2, val3);
+  background(colorBack);
 }
 
 function addApps() {
