@@ -3,7 +3,6 @@ let pg;
 
 let plus;
 var plusButton;
-var lightButton;
 var healthButton;
 var weather;
 var bigWeather;
@@ -182,7 +181,7 @@ function backToMirror(){
   backButton.hide();
 
   plusButton.show();
-  lightButton.show();
+  select('#custom', HTMLElement).show();
   healthButton.show();
   select('#twitter', HTMLElement).show();
   select('#spotify', HTMLElement).show();
@@ -195,7 +194,7 @@ function backToMirror(){
 function backToBlank(){
   setup();
   plusButton.show();
-  lightButton.show();
+  select('#custom', HTMLElement).show();
   healthButton.show();
   backButton.hide();
   select('#twitter', HTMLElement).show();
@@ -208,7 +207,7 @@ function backToBlank(){
 
 function hideAllApps() {
   plusButton.hide();
-  lightButton.hide();
+  select('#custom', HTMLElement).hide();
   healthButton.hide();
   select('#twitter', HTMLElement).hide();
   select('#spotify', HTMLElement).hide();
@@ -224,7 +223,7 @@ function hideAllApps() {
 
 function hideHalfApp() {
   plusButton.hide();
-  lightButton.hide();
+  select('#custom', HTMLElement).hide();
   healthButton.hide();
   select('#spotify', HTMLElement).hide();
   pg.clear();
