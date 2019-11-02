@@ -418,6 +418,36 @@ function drawHealth() {
 
 function backToBlank(){
   setup();
+  if(health == true){
+    health2Button.show();
+  }
+  if(youtube == true){
+    youtube2Button.show();
+  }
+  if(mail == true){
+    emailButton.show();
+  }
+  if(facebook == true){
+    facebookButton.show();
+  }
+  if(instagram == true){
+    instagramButton.show();
+  }
+  if(linkdin == true){
+    linkedInButton.show();
+  }
+  if(snapchat == true){
+    snapchatButton.show();
+  }
+  if(spotify == true){
+    spotifyButton.show();
+  }
+  if(messaging == true){
+    telegramButton.show();
+  }
+  if(twitter == true){
+    twitterButton.show();
+  }
   plusButton.show();
   select('#custom', HTMLElement).show();
   healthButton.show();
@@ -432,6 +462,37 @@ function backToBlank(){
 }
 
 function hideHalfApp() {
+  if(health == true){
+    health2Button.hide();
+  }
+  if(youtube == true){
+    youtube2Button.hide();
+  }
+  if(mail == true){
+    emailButton.hide();
+  }
+  if(facebook == true){
+    facebookButton.hide();
+  }
+  if(instagram == true){
+    instagramButton.hide();
+  }
+  if(linkdin == true){
+    linkedInButton.hide();
+  }
+  if(snapchat == true){
+    snapchatButton.hide();
+  }
+  if(spotify == true){
+    spotifyButton.hide();
+  }
+  if(messaging == true){
+    telegramButton.hide();
+  }
+  if(twitter == true){
+    twitterButton.hide();
+  }
+
   plusButton.hide();
   select('#custom', HTMLElement).hide();
   healthButton.hide();
