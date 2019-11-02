@@ -16,6 +16,7 @@ var weightHealth = true;
 var caloriesHealth = true;
 var workOutHealth = false;
 
+var onHomePage = true;
 var health = false;
 var youtube = false;
 var mail = false;
@@ -109,6 +110,7 @@ function setup() {
 
   calendar();
   time();
+  onHomePage = true;
 }
 
 function expandWeather() {
@@ -127,6 +129,7 @@ function changeBG() {
 
 function addApps() {
   hideAllApps();
+  onHomePage = false;
 
   health2Button = createImg('Assets/Apple_Health.png');
   health2Button.position(45, pg.height-675);
@@ -442,7 +445,7 @@ function hideHalfApp() {
 // ---------------------------------------------------------------
 
 function addAppsToHomePage (name) {
-  print("%s", name);
+  if(onHomePage == false){
  switch(name) {
    case "Health":
      health = true;
@@ -485,6 +488,10 @@ function addAppsToHomePage (name) {
      backToMirror();
      break;
  };
+  }
+  else{
+    // Draggable code comes here
+  }
 }
 
 function backToMirror(){
