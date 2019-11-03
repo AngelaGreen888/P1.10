@@ -99,6 +99,7 @@ function setup() {
   healthButton.size(80, 80);
   healthButton.mousePressed(setUpHealth);
 
+  select('#widget1', HTMLElement).position(pg.width, pg.height);
   select('#spotify', HTMLElement).position(30, pg.height-240);
   select('#twitter', HTMLElement).position(pg.width-280, pg.height-230);
   select('#fgid_c594f4542f3268d5003c41ac8', HTMLElement).position(pg.width-280, pg.height-460)

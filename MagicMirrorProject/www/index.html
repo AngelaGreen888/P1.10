@@ -17,7 +17,8 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<html>
+
+<html lang="en">
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -38,9 +39,83 @@
             <script src="../node_modules/gridstack/dist/gridstack.jQueryUI.js"></script>
             <script src="../node_modules/gridstack/dist/gridstack.all.js"></script>
             <script src="../node_modules/vanilla-picker/dist/vanilla-picker.js"></script>
+            <!-- start of gridstack head -->
+            <title>A gridstack.js dashboard</title>
+            <link rel="stylesheet" href="https://bootswatch.com/3/paper/bootstrap.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridstack.js/0.4.0/gridstack.css"/>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.0/jquery-ui.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.0/lodash.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gridstack.js/0.4.0/gridstack.all.js"></script>
+
+            <link rel="stylesheet" href="../node_modules/gridstack/dist/gridstack.css"/>
+
+            <script src="../node_modules/gridstack/dist/gridstack.js"></script>
+            <script src="../node_modules/gridstack/dist/gridstack.jQueryUI.js"></script>
+            <script src="../node_modules/gridstack/dist/gridstack.all.js"></script>
+            <script src="../node_modules/vanilla-picker/dist/vanilla-picker.js"></script>
+            <!-- end of gridstack head -->
         </head>
 
     <body>
+    <!-- start of gridstack body -->
+
+        <div class="container">
+            <div class="row">
+                <!--<div class="col-sm-12">
+                    <h2>A gridstack.js dashboard</h2>
+                </div>-->
+                <div class="col-sm-12 well">
+                    <!-- gridstack.js elements go here -->
+
+                    <div class="grid-stack">
+                        <div id="widget1">
+                        <div class="grid-stack-item" data-gs-x="0" data-gs-y="0" data-gs-width="2" data-gs-height="2">
+                            <div class="grid-stack-item-content panel panel-primary">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Widget 1</h3>
+                                </div>
+                                <div class=panel-body">
+                                    content here
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="grid-stack-item" data-gs-x="2" data-gs-y="0" data-gs-width="2" data-gs-height="2">
+                            <div class="grid-stack-item-content panel panel-success">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Widget 2</h3>
+                                </div>
+                                <div class=panel-body">
+                                    content here
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-stack-item" data-gs-x="0" data-gs-y="2" data-gs-width="3" data-gs-height="2">
+                            <div class="grid-stack-item-content panel panel-warning">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Widget 3</h3>
+                                </div>
+                                <div class=panel-body">
+                                    content here
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(function () {
+                $('.grid-stack').gridstack();
+            });
+        </script>
+
+    <!-- end of gridstack body -->
+
         <iframe id="spotify"
                 src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3"
                 width="300"
