@@ -13,6 +13,7 @@
     "author": "Apache Cordova Team",
     "license": "Apache-2.0",
     "dependencies": {
+        "gridstack": "^0.4.0",
         "vanilla-picker": "^2.10.0"
     }
 }
