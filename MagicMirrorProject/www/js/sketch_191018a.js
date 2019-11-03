@@ -95,8 +95,8 @@ function setup() {
   select('#custom', HTMLElement).position(82, pg.height-64);
   
   healthButton = createImg('Assets/Apple_Health.png');
-  healthButton.position(15, pg.height-500);
-  healthButton.size(80, 80);
+  healthButton.position(120, pg.height-80);
+  healthButton.size(60, 60);
   healthButton.mousePressed(setUpHealth);
   
   select('#spotify', HTMLElement).position(30, pg.height-240);
