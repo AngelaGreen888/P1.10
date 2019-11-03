@@ -99,7 +99,7 @@ function setup() {
   healthButton.size(60, 60);
   healthButton.mousePressed(setUpHealth);
   
-  select('#spotify', HTMLElement).position(30, pg.height-240);
+  select('#spotify', HTMLElement).position(30, pg.height-480);
   select('#twitter', HTMLElement).position(pg.width-280, pg.height-230);
   select('#fgid_c594f4542f3268d5003c41ac8', HTMLElement).position(pg.width-280, pg.height-460)
   weather = select('#m-booked-bl-simple-10717', HTMLElement).position(pg.width/2-80, 75);
