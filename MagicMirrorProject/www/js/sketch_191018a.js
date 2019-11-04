@@ -6,6 +6,7 @@ var plusButton;
 var healthButton;
 var weather;
 var bigWeather;
+var bathroom;
 
 var removeCalendar = false;
 var removeTime = false;
@@ -80,7 +81,10 @@ function setup() {
   pg = createGraphics(1280, 720);
   pg.background(0, 0, 0, 0);
   pg.noStroke();
-  
+
+  bathroom = createImg('Assets/BathroomMirrorLayer.png');
+  bathroom.position(0, pg.height);
+
   let c = color(255, 204, 0);
   pg.fill(c);
   pg.circle(30, pg.height-30, 20);
