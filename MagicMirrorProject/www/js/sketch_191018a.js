@@ -190,8 +190,8 @@ function addApps() {
   twitterButton.mousePressed(function () {addAppsToHomePage("Twitter");});
 
   backButton = createButton('back');
-  backButton.position(1200, pg.height-50);
-  backButton.size(50, 10);
+  backButton.position(1200, pg.height-60);
+  backButton.size(50,30);
   backButton.mousePressed(backToMirror);
 
 }
@@ -354,8 +354,8 @@ function setUpHealth() {
   displayHealth = true;
 
   backButton = createButton('back');
-  backButton.position(30, pg.height-50);
-  backButton.size(50, 10);
+  backButton.position(30, pg.height-60);
+  backButton.size(50, 30);
   backButton.mousePressed(backToBlank);
 
   drawHealth();
