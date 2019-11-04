@@ -152,7 +152,7 @@ function addApps() {
   emailButton = createImg('Assets/E_Mail.png');
   emailButton.position(45, pg.height-545);
   emailButton.size(50, 50);
-  emailButton.mousePressed(function () {addAppsToHomePage("Email");});
+  emailButton.mousePressed(function () {addAppsToHomePage("Mail");});
 
   facebookButton = createImg('Assets/Facebook.png');
   facebookButton.position(45, pg.height-480);
@@ -563,62 +563,62 @@ function addAppsToHomePage (name) {
 function backToMirror(){
   setup();
   if(health == true){
-        health2Button.position(pg.width/2, pg.height/2);
+        health2Button.position(125, pg.height-74);
   }
   else{
   health2Button.hide();
   }
   if(youtube == true){
-    youtube2Button.position(pg.width/2, pg.height/2);
+    youtube2Button.position(175, pg.height-74);
   }
   else{
     youtube2Button.hide();
   }
   if(mail == true){
-        emailButton.position(pg.width/2, pg.height/2);
+        emailButton.position(225, pg.height-74);
   }
   else{
   emailButton.hide();
   }
   if(facebook == true){
-        facebookButton.position(pg.width/2, pg.height/2);
+        facebookButton.position(275, pg.height-74);
   }
   else{
   facebookButton.hide();
   }
   if(instagram == true){
-        instagramButton.position(pg.width/2, pg.height/2);
+        instagramButton.position(325, pg.height-74);
   }
   else{
   instagramButton.hide();
   }
   if(linkdin == true){
-        linkedInButton.position(pg.width/2, pg.height/2);
+        linkedInButton.position(375, pg.height-74);
   }
   else{
   linkedInButton.hide();
   }
   if(snapchat == true){
-        snapchatButton.position(pg.width/2, pg.height/2);
+        snapchatButton.position(425, pg.height-74);
   }
   else{
   snapchatButton.hide();
   }
   if(spotify == true){
-        spotifyButton.position(pg.width/2, pg.height/2);
+        spotifyButton.position(475, pg.height-74);
   }
   else{
   spotifyButton.hide();
   }
 
   if(messaging == true){
-        telegramButton.position(pg.width/2, pg.height/2);
+        telegramButton.position(525, pg.height-74);
   }
   else{
   telegramButton.hide();
   }
   if(twitter == true){
-        twitterButton.position(pg.width/2, pg.height/2);
+        twitterButton.position(575, pg.height-74);
   }
   else{
   twitterButton.hide();
