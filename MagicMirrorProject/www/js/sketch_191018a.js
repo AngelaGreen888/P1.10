@@ -98,10 +98,11 @@ function setup() {
   healthButton.position(120, pg.height-80);
   healthButton.size(60, 60);
   healthButton.mousePressed(setUpHealth);
-  
+
+
   select('#spotify', HTMLElement).position(30, pg.height-480);
   select('#twitter', HTMLElement).position(pg.width-280, pg.height-230);
-  select('#fgid_c594f4542f3268d5003c41ac8', HTMLElement).position(pg.width-280, pg.height-460)
+  select('#fgid_c594f4542f3268d5003c41ac8', HTMLElement).position(pg.width-280, pg.height-460);
   weather = select('#m-booked-bl-simple-10717', HTMLElement).position(pg.width/2-80, 75);
   weather.mousePressed(expandWeather);
   bigWeather = select('#m-booked-weather-bl250-84348', HTMLElement).position(pg.width/2-125, 75);
@@ -291,8 +292,8 @@ function draw() {
     time();
   }
 
-  //testing draggable
-  //calendar draggable
+
+  //draggable
   // Is mouse over object
   if (mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h) {
     rollover = true;
@@ -314,24 +315,7 @@ function draw() {
     rollover = false;
   }
   stroke(0);
-  // Adjust location if being dragged
-  /*if (dragging) {
-    x = mouseX + offsetX;
-    y = mouseY + offsetY;
-  }*/
 
-  /*stroke(0);
-  // Different fill based on state
-  if (dragging) {
-    fill (50);
-  } else if (rollover) {
-    fill(100);
-  } else {
-    fill(175, 200);
-  }
-  rect(x, y, w, h);*/
-
-  //end test
 }
 
 // ---------------------------------------------------------------
