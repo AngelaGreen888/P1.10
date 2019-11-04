@@ -1,5 +1,14 @@
 # Project 1 - Group 10: Personal Mirror
 
+### How to Download and Navigate File
+
+- git clone
+- cd MagicMirrorProject
+- cd www
+  - Open index.html
+- cd js
+  - Open sketch_191018a.js 
+
 ### Team members and our roles
 
 ![](P1.10.GroupPicture.jpg)
