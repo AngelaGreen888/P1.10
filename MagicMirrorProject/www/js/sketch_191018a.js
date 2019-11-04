@@ -193,7 +193,6 @@ function addApps() {
 }
 
 function calendar() {
-
   textSize(20);
   textAlign(LEFT, CENTER);
   fill('rgba(31,31,31,0.75)');
@@ -665,7 +664,6 @@ function hideAllApps() {
   removeCalendar = true;
 
 }
-
 // ---------------------------------------------------------------
 // N O T I F I C A T I O N S
 // ---------------------------------------------------------------
@@ -673,13 +671,13 @@ function hideAllApps() {
 function drawNotification() {
     let c = color('rgba(31,31,31,0.75)');
     pg.fill(c);
-    pg.rect(pg.width-268, pg.height-695, 258, 220);
+    pg.rect(pg.width-268, pg.height-710, 258, 230);
 
     strokeWeight(1);
     pg.fill(255);
     pg.textSize(20);
     pg.textFont('Helvetica Neue');
-    pg.text("Notifications", pg.width-193, pg.height-670);
+    pg.text("Notifications", pg.width-193, pg.height-680);
 
     // Example notification
     pg.fill(35, 197, 82);
@@ -701,14 +699,20 @@ function drawNotification() {
     pg.rect(pg.width-246, pg.height-595, 220, 55, 10);
 
     // Sample text for the second notification
-   strokeWeight(1);
-   pg.fill(255);
-   pg.textSize(16);
-   pg.textFont('Helvetica Neue');
-   pg.text("        Instagram", pg.width-240, pg.height-572);
+    strokeWeight(1);
+    pg.fill(255);
+    pg.textSize(16);
+    pg.textFont('Helvetica Neue');
+    pg.text("        Instagram", pg.width-240, pg.height-572);
 
     pg.textSize(14);
     pg.textFont('Helvetica Neue');
     pg.text("Someone started following you.", pg.width-232, pg.height-554);
+
+    // Line Separator
+    pg.strokeWeight(1);
+    pg.stroke(255);
+    pg.line( 1040, 50, 1245, 50)
+
 }
 
