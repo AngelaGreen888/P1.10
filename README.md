@@ -5,9 +5,9 @@
 - git clone
 - cd MagicMirrorProject
 - cd www
-  - Open index.html *where our html is
+  - Open index.html *where our html is*
 - cd js
-  - Open sketch_191018a.js *where our p5.js code is
+  - Open sketch_191018a.js *where our p5.js code is*
 
 
 
