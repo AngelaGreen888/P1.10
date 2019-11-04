@@ -193,15 +193,28 @@ function addApps() {
 }
 
 function calendar() {
-  textSize(20);
-  textAlign(LEFT, CENTER);
-  fill('rgba(31,31,31,0.75)');
-  rect(x, y, w, h);
-  fill(255);
-  textFont('Helvetica Neue');
-  text(month() + '/' + day() + '/' + year(), xx, yy + 7);
-  text('Get groceries', xx, yy + 38);
-  text('HW4 due', xx, yy + 62);
+    textSize(20);
+    textAlign(LEFT, CENTER);
+    fill('rgba(31,31,31,0.75)');
+    rect(x, y, w, h);
+    fill(255);
+    strokeWeight(0);
+    textFont('Helvetica Neue');
+    text(month() + '/' + day() + '/' + year(), xx + 90, yy + 7);
+
+    stroke(255);
+    strokeWeight(1);
+    line(xx+15, yy+25, xx+265, yy+25);
+
+    strokeWeight(0);
+    textSize(17)
+    text('- Get groceries', xx+20, yy + 45);
+    text('- HCI HW', xx+20, yy +100);
+
+    strokeWeight(0);
+    textSize(15)
+    text('Eggs, Butter, Milk', xx+50, yy+65);
+    text('Due: Nov. 29', xx+50, yy+120)
 }
 
 function time() {
