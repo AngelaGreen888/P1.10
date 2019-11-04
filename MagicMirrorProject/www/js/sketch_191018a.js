@@ -63,7 +63,7 @@ function setup() {
   a = 15;
   b = 500;
   // Dimensions
-  w = 150;
+  w = 300;
   h = 200;
   //weather
   d = 80;
@@ -193,11 +193,13 @@ function addApps() {
 }
 
 function calendar() {
+
   textSize(20);
   textAlign(LEFT, CENTER);
-  //rect(30, 30, 150, 50);
+  fill('rgba(31,31,31,0.75)');
   rect(x, y, w, h);
-  //text('test', 50, 41);
+  fill(255);
+  textFont('Helvetica Neue');
   text(month() + '/' + day() + '/' + year(), xx, yy + 7);
   text('Get groceries', xx, yy + 38);
   text('HW4 due', xx, yy + 62);
@@ -688,7 +690,11 @@ function drawNotification() {
     pg.fill(255);
     pg.textSize(16);
     pg.textFont('Helvetica Neue');
-    pg.text("Snapchat \n New snap from Jenny.", pg.width-210, pg.height-632);
+    pg.text(" Snapchat", pg.width-210, pg.height-632);
+
+    pg.textSize(14);
+    pg.textFont('Helvetica Neue');
+    pg.text("New snap from Jenny.", pg.width-230, pg.height-613);
 
     // Example notification
     pg.fill(35, 197, 82);
@@ -699,7 +705,10 @@ function drawNotification() {
    pg.fill(255);
    pg.textSize(16);
    pg.textFont('Helvetica Neue');
-   pg.text("        Instagram \n Someone started following you.", pg.width-240, pg.height-572);
+   pg.text("        Instagram", pg.width-240, pg.height-572);
 
+    pg.textSize(14);
+    pg.textFont('Helvetica Neue');
+    pg.text("Someone started following you.", pg.width-232, pg.height-554);
 }
 
