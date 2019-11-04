@@ -10,6 +10,8 @@
   - Open sketch_191018a.js *where our p5.js code is*
 
 
+### Gif of our project
+![](p1.10.gif)
 
 ### Team members and our roles
 
