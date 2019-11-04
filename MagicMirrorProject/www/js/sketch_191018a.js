@@ -226,18 +226,18 @@ function time() {
 
   if (h > 12) {
     if (m < 10) {
-      text((hour() - 12) + ':0' + minute(), 650, 50);
+      text((hour() - 12) + ':0' + minute() + ' PM', 650, 50);
     }
     else {
-      text((hour() - 12) + ':' + minute(), 650, 50);
+      text((hour() - 12) + ':' + minute() + ' PM', 650, 50);
     }
   }
   else {
     if (m < 10) {
-      text(hour() + ':0' + minute(), 650, 50);
+      text(hour() + ':0' + minute() + ' PM', 650, 50);
     }
     else {
-      text(hour() + ':' + minute(), 650, 50);
+      text(hour() + ':' + minute() + ' PM', 650, 50);
     }
   }
 }
