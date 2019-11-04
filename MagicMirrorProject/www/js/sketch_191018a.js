@@ -706,11 +706,11 @@ function drawNotification() {
     pg.fill(255);
     pg.textSize(16);
     pg.textFont('Helvetica Neue');
-    pg.text("Snapchat", pg.width-210, pg.height-632);
+    pg.text(" Snapchat", pg.width-210, pg.height-632);
 
     pg.textSize(14);
     pg.textFont('Helvetica Neue');
-    pg.text("New snap from Jenny.", pg.width-200, pg.height-628);
+    pg.text("New snap from Jenny.", pg.width-230, pg.height-613);
 
     // Example notification
     pg.fill(35, 197, 82);
@@ -725,6 +725,6 @@ function drawNotification() {
 
     pg.textSize(14);
     pg.textFont('Helvetica Neue');
-    pg.text("Someone started following you.", pg.width-230, pg.height-620);
+    pg.text("Someone started following you.", pg.width-232, pg.height-554);
 }
 
