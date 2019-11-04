@@ -36,13 +36,13 @@ var x, y, w, h, xx, yy;          // Location and size
 var offsetX, offsetY, offsetXX, offsetYY;    // Mouseclick offset
 var a, b, d, e;
 
-var colorBack = 'violet';
+var colorBack = 'gray';
 function $(selector) { return document.querySelector(selector); }
 const parentCustom = $('#custom'),
     popupCustom = new Picker({
       parent: parentCustom,
       popup: 'top',
-      color: 'violet',
+      color: 'gray',
       //alpha: false,
       //editor: false,
       editorFormat: 'rgb',
@@ -85,7 +85,7 @@ function setup() {
   bathroom = createImg('Assets/BathroomMirrorLayer.png');
   bathroom.position(0, pg.height);
 
-  let c = color(255, 204, 0);
+  let c = color(255);
   pg.fill(c);
   pg.circle(30, pg.height-30, 20);
   plusButton = createImg('Assets/Plus.png');
@@ -93,7 +93,7 @@ function setup() {
   plusButton.size(31, 31);
   plusButton.mousePressed(addApps);
   
-  c = color(255, 204, 0);
+  c = color(255);
   pg.fill(c);
   pg.circle(80, pg.height-30, 20);
   select('#custom', HTMLElement).position(82, pg.height-64);
